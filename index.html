@@ -5,6 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PT Shoes — Quality Footwear, Honest Prices</title>
 <meta name="description" content="PT Shoes — factory-direct shoes, bags and accessories. Quality materials, careful craftsmanship, fast worldwide shipping. Contact us on WhatsApp or Telegram.">
+<link rel="canonical" href="https://ptshoes.us.ci/">
+<link rel="icon" href="./site-icon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PT Shoes">
+<meta property="og:title" content="PT Shoes — Quality Footwear, Honest Prices">
+<meta property="og:description" content="Factory-direct shoes, bags and accessories. Chat with us on WhatsApp (btc188) or Telegram (@andylbd).">
+<meta property="og:url" content="https://ptshoes.us.ci/">
+<meta property="og:image" content="https://ptshoes.us.ci/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PT Shoes — Quality Footwear, Honest Prices">
+<meta name="twitter:description" content="Factory-direct shoes, bags and accessories. WhatsApp: btc188 · Telegram: @andylbd">
+<meta name="twitter:image" content="https://ptshoes.us.ci/og-image.png">
+<meta name="theme-color" content="#17181c">
 <style>
   :root {
     --ink: #17181c;
@@ -309,6 +324,42 @@
   footer { border-top: 1px solid var(--line); padding: 34px 0; color: var(--ink-3); font-size: 13px; }
 
   .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  /* ===== Sticky contact bar ===== */
+  body { padding-bottom: 76px; }
+
+  .sticky-cta {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 60;
+    display: flex;
+    gap: 10px;
+    padding: 12px max(16px, calc((100vw - 640px) / 2));
+    background: rgba(255, 255, 255, .92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -6px 24px rgba(23, 24, 28, .08);
+  }
+
+  .sticky-cta a {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 10px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .16s ease, box-shadow .16s ease, background .16s;
+  }
+
+  .sticky-cta .wa { background: var(--ink); color: #fff; }
+  .sticky-cta .wa:hover { background: var(--accent); transform: translateY(-2px); }
+  .sticky-cta .tg { background: #fff; color: var(--ink); border: 1.5px solid var(--line); }
+  .sticky-cta .tg:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
   /* ===== Responsive ===== */
   @media (max-width: 900px) {
