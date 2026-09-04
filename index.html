@@ -424,7 +424,14 @@
       html { scroll-behavior: auto; }
     }
   </style>
-</head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDE7CN1DH1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-XDE7CN1DH1");
+    </script>
+  </head>
 <body>
   <!-- Announcement marquee -->
   <div class="marquee" aria-hidden="true">
@@ -705,5 +712,18 @@
       });
     });
   </script>
-</body>
+
+  <script>
+    document.addEventListener("click", function (e) {
+      var t = e.target;
+      var a = t && t.closest ? t.closest("a[href]") : null;
+      if (!a) return;
+      var href = a.getAttribute("href") || "";
+      var channel = href.indexOf("wa.me") > -1 || href.indexOf("whatsapp") > -1 ? "whatsapp" : (href.indexOf("t.me") > -1 || href.indexOf("telegram") > -1 ? "telegram" : null);
+      if (channel && typeof gtag === "function") {
+        gtag("event", "wa_click", { channel: channel, page: window.location.pathname });
+      }
+    }, { passive: true });
+  </script>
+  </body>
 </html>
