@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-label="All-white low-top sneaker illustration">
+  <defs>
+    <linearGradient id="up" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eceae4"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="212" cy="266" rx="180" ry="13" fill="rgba(0,0,0,0.30)"/>
+  <rect x="26" y="246" width="370" height="13" rx="6.5" fill="#b9b4aa"/>
+  <rect x="20" y="224" width="380" height="27" rx="13.5" fill="#fbfaf7"/>
+  <path d="M40,228 C33,200 52,175 94,166 L298,143 C328,140 354,132 370,138 C383,144 389,170 390,228 Z" fill="url(#up)" stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+  <path d="M40,228 C33,200 52,175 94,166 C84,187 80,208 82,228 Z" fill="#ffffff" stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+  <ellipse cx="316" cy="141" rx="23" ry="8" fill="#8f8b82" transform="rotate(-7 316 141)"/>
+  <path d="M152,156 L290,128 L300,149 L160,177 Z" fill="#d8d4cb"/>
+  <path d="M176,167 L187,146" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M210,159 L221,138" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M244,151 L255,130" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M272,144 L283,123" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M332,140 C350,132 366,138 375,152 C382,163 387,194 388,228 L337,228 C339,198 337,166 332,140 Z" fill="#dedbd2"/>
+  <rect x="352" y="126" width="15" height="24" rx="7.5" fill="#dedbd2" transform="rotate(14 359 138)"/>
+  <path d="M100,220 C116,194 146,180 180,172" stroke="rgba(0,0,0,0.12)" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+</svg>

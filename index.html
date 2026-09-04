@@ -187,6 +187,11 @@
       filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 44px rgba(232, 176, 75, 0.3));
       animation: float 4.5s ease-in-out infinite;
     }
+    .hero-shoe-img {
+      width: clamp(230px, 54vw, 320px);
+      filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 44px rgba(232, 176, 75, 0.3));
+      animation: float 4.5s ease-in-out infinite;
+    }
     @keyframes float {
       0%, 100% { transform: translateY(0) rotate(-6deg); }
       50% { transform: translateY(-18px) rotate(-2deg); }
@@ -256,6 +261,8 @@
     .cat:hover::before { opacity: 1; }
     .cat-emoji { font-size: 3.2rem; margin-bottom: 16px; display: inline-block; transition: transform 0.25s ease; }
     .cat:hover .cat-emoji { transform: scale(1.15) rotate(-6deg); }
+    .cat-img { width: 100%; height: 150px; object-fit: contain; display: block; margin-bottom: 16px; filter: drop-shadow(0 14px 16px rgba(0, 0, 0, 0.5)); transition: transform 0.25s ease; }
+    .cat:hover .cat-img { transform: translateY(-4px) scale(1.04) rotate(-3deg); }
     .cat h3 { font-size: 1.22rem; margin-bottom: 8px; }
     .cat p { color: var(--ink-2); font-size: 0.92rem; min-height: 3.1em; }
     .cat-link { display: inline-block; margin-top: 16px; color: var(--gold-soft); font-weight: 750; font-size: 0.9rem; letter-spacing: 0.04em; }
@@ -446,7 +453,7 @@
         <a class="btn btn-tg" href="https://t.me/andylbd" target="_blank" rel="noopener"><span class="btn-icon">✈️</span> Telegram @andylbd</a>
       </div>
       <div class="hero-visual">
-        <span class="hero-shoe">👟</span>
+        <img class="hero-shoe-img" src="./assets/shoes/court-low-panda.svg" alt="Black and white retro court sneaker" width="420" height="300" />
         <div class="hero-shadow"></div>
         <span class="hero-tag">NEW DROP WEEKLY</span>
       </div>
@@ -501,22 +508,22 @@
         <p>Real photos, sizes, and prices live in our WhatsApp catalog — tap any style and we'll send the latest pictures within minutes.</p>
       </div>
       <div class="cats">
-        <a class="cat" href="https://wa.me/btc188?text=Hi!%20Interested%20in%20retro%20runner%20styles" target="_blank" rel="noopener">
-          <span class="cat-emoji">👟</span>
-          <h3>Retro Runners</h3>
-          <p>Vintage silhouettes that never go out of style.</p>
+        <a class="cat" href="https://wa.me/btc188?text=Hi!%20Interested%20in%20the%20panda%20court%20low" target="_blank" rel="noopener">
+          <img class="cat-img" src="./assets/shoes/court-low-panda.svg" alt="Black and white low-top court sneaker" loading="lazy" width="420" height="300" />
+          <h3>Panda Court Low</h3>
+          <p>The crisp black-and-white court silhouette that goes with everything you own.</p>
           <span class="cat-link">Ask for photos &amp; price</span>
         </a>
-        <a class="cat" href="https://wa.me/btc188?text=Hi!%20Interested%20in%20high-top%20basketball%20styles" target="_blank" rel="noopener" style="--glow: rgba(214, 130, 60, 0.16);">
-          <span class="cat-emoji">🏀</span>
-          <h3>Court Classics</h3>
-          <p>High-top basketball looks with serious presence.</p>
+        <a class="cat" href="https://wa.me/btc188?text=Hi!%20Interested%20in%20the%20black%20and%20red%20high-top" target="_blank" rel="noopener" style="--glow: rgba(214, 90, 70, 0.16);">
+          <img class="cat-img" src="./assets/shoes/court-high-red.svg" alt="Black and red high-top sneaker" loading="lazy" width="420" height="300" />
+          <h3>Black &amp; Red High-Top</h3>
+          <p>High-top presence in the timeless red and black pairing.</p>
           <span class="cat-link">Ask for photos &amp; price</span>
         </a>
-        <a class="cat" href="https://wa.me/btc188?text=Hi!%20Interested%20in%20lightweight%20running%20shoes" target="_blank" rel="noopener" style="--glow: rgba(96, 165, 210, 0.16);">
-          <span class="cat-emoji">🏃</span>
-          <h3>Featherlight Runners</h3>
-          <p>From morning jog to midnight errands in comfort.</p>
+        <a class="cat" href="https://wa.me/btc188?text=Hi!%20Interested%20in%20the%20zebra%20knit%20runner" target="_blank" rel="noopener" style="--glow: rgba(96, 165, 210, 0.16);">
+          <img class="cat-img" src="./assets/shoes/knit-runner-zebra.svg" alt="Zebra knit sock-style runner" loading="lazy" width="420" height="300" />
+          <h3>Zebra Knit Runner</h3>
+          <p>Sock-fit woven upper, bold zebra weave, pillow-soft sole.</p>
           <span class="cat-link">Ask for photos &amp; price</span>
         </a>
         <a class="cat" href="https://wa.me/btc188?text=Hi!%20Interested%20in%20boots" target="_blank" rel="noopener" style="--glow: rgba(180, 140, 90, 0.18);">
