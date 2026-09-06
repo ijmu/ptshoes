@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <script>(function(){try{var t=localStorage.getItem("theme");var d=t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;var r=document.documentElement;r.classList.add(d?"dark":"light");window.__setTheme=function(x){r.classList.remove("dark","light");r.classList.add(x);try{localStorage.setItem("theme",x)}catch(e){};var b=document.querySelectorAll(".theme-toggle");for(var i=0;i<b.length;i++)b[i].textContent=x==="dark"?"\u2600\uFE0F":"\uD83C\uDF19";};window.__setTheme(d?"dark":"light");}catch(e){}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1f" />
@@ -89,9 +90,9 @@
       position: sticky;
       top: 0;
       z-index: 60;
-      background: rgba(14, 12, 9, 0.82);
+      background: rgba(255, 255, 255, 0.82);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid var(--divider);
     }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .brand-icon {
@@ -271,7 +272,7 @@
     .cat:hover .cat-link::after { margin-left: 5px; }
 
     /* ---------- Why us ---------- */
-    .why { background: var(--bg-soft); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .why { background: var(--bg-soft); border-top: 1px solid var(--divider); border-bottom: 1px solid var(--divider); }
     .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; max-width: 1120px; margin: 0 auto; }
     .why-card {
       background: var(--card); border: 1px solid var(--card-line);
@@ -367,7 +368,7 @@
 
     /* ---------- Footer ---------- */
     footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      border-top: 1px solid var(--divider);
       padding: 44px 5vw 120px;
       text-align: center; color: var(--ink-3); font-size: 0.9rem;
     }
@@ -438,6 +439,8 @@
       --bg: #ffffff; --bg-soft: #f6f6f7; --divider: #e2e2e3; --divider-strong: #d9d9db;
       --text-1: #213547; --text-2: rgba(60, 60, 67, 0.78); --text-3: rgba(60, 60, 67, 0.56);
       --brand: #a8761f; --brand-bright: #d9a441; --brand-soft: rgba(184, 131, 44, 0.1); --brand-line: rgba(184, 131, 44, 0.38);
+      --ink: #213547; --ink-2: rgba(60, 60, 67, 0.78); --ink-3: rgba(60, 60, 67, 0.56);
+      --card: #ffffff; --card-line: #e2e2e3; --gold: #a8761f; --gold-soft: #d9a441; --gold-deep: #8a5f1a;
     }
     body { background: var(--bg); color: var(--text-1); }
     h1, h2, h3 { letter-spacing: -0.015em; }
@@ -489,6 +492,8 @@
         --bg: #1b1b1f; --bg-soft: #161618; --divider: #2e2e32; --divider-strong: #3a3a3f;
         --text-1: rgba(255, 255, 245, 0.86); --text-2: rgba(235, 235, 245, 0.6); --text-3: rgba(235, 235, 245, 0.38);
         --brand: #d9a441; --brand-bright: #f0c97a; --brand-soft: rgba(217, 164, 65, 0.14); --brand-line: rgba(217, 164, 65, 0.4);
+        --ink: rgba(255, 255, 245, 0.86); --ink-2: rgba(235, 235, 245, 0.6); --ink-3: rgba(235, 235, 245, 0.38);
+        --card: #1f1f23; --card-line: #2e2e32; --gold: #d9a441; --gold-soft: #f0c97a; --gold-deep: #b9832c;
       }
       body { background: var(--bg); }
       .btn-tg { background: var(--bg-soft); color: var(--text-1); }
@@ -499,7 +504,14 @@
 
   </style>
 
-  </head>
+  <style id="vp-theme-toggle">
+    html.dark { --bg: #1b1b1f; --bg-soft: #161618; --divider: #2e2e32; --divider-strong: #3a3a3f; --text-1: rgba(255, 255, 245, 0.86); --text-2: rgba(235, 235, 245, 0.6); --text-3: rgba(235, 235, 245, 0.38); --brand: #d9a441; --brand-bright: #f0c97a; --brand-soft: rgba(217, 164, 65, 0.14); --brand-line: rgba(217, 164, 65, 0.4); --ink: rgba(255, 255, 245, 0.86); --ink-2: rgba(235, 235, 245, 0.6); --ink-3: rgba(235, 235, 245, 0.38); --card: #1f1f23; --card-line: #2e2e32; --gold: #d9a441; --gold-soft: #f0c97a; --gold-deep: #b9832c; }
+    html.light { --bg: #ffffff; --bg-soft: #f6f6f7; --divider: #e2e2e3; --divider-strong: #d9d9db; --text-1: #213547; --text-2: rgba(60, 60, 67, 0.78); --text-3: rgba(60, 60, 67, 0.56); --brand: #a8761f; --brand-bright: #d9a441; --brand-soft: rgba(184, 131, 44, 0.1); --brand-line: rgba(184, 131, 44, 0.38); --ink: #213547; --ink-2: rgba(60, 60, 67, 0.78); --ink-3: rgba(60, 60, 67, 0.56); --card: #ffffff; --card-line: #e2e2e3; --gold: #a8761f; --gold-soft: #d9a441; --gold-deep: #8a5f1a; }
+    html.dark .sticky-bar { background: rgba(27, 27, 31, 0.9); }
+    html.light .sticky-bar { background: rgba(255, 255, 255, 0.9); }
+    .theme-toggle { position: fixed; top: 14px; right: 14px; z-index: 90; width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--divider-strong); background: var(--card); cursor: pointer; font-size: 1.05rem; line-height: 1; }
+  </style>
+</head>
 <body>
   <!-- Announcement marquee -->
   <div class="marquee" aria-hidden="true">
@@ -724,7 +736,7 @@
     </section>
 
     <!-- ==================== CONTACT ==================== -->
-    <section aria-labelledby="contact-title" style="background: var(--bg-soft); border-top: 1px solid rgba(255,255,255,0.05);">
+    <section aria-labelledby="contact-title" style="background: var(--bg-soft); border-top: 1px solid var(--divider);">
       <div class="section-head">
         <span class="eyebrow">Contact</span>
         <h2 id="contact-title">Talk to us right now</h2>
@@ -758,7 +770,7 @@
     <p>Premium sneakers, boots, and bags at factory-direct prices — quality checked by hand, shipped worldwide.</p>
     <p>&copy; <span id="year">2026</span> PT Shoes. All rights reserved.</p>
     <!-- Sample imagery (CC licensed, used as style reference): "Nike SB Dunk High MF Doom" by TanSenpai from Philadelphia, United States, CC BY 2.0; "High-Top sneakers" by MalcomXxtacy, CC BY 4.0; "2023 Adidas Yeezy 350 V2 EF2905 (1)" by Jacek Halicki, CC BY-SA 4.0; "Timberland Pro Splitrock work boots" by Best For My Feet, CC BY-SA 4.0; "Sophia Webster pink and black stiletto sandals. 2013" by Mabalu (photograph), Sophia Webster (shoes), CC BY-SA 4.0; "ANTORINI Executive Leather Briefcase" by Antorini, CC BY-SA 4.0. Source: Wikimedia Commons. -->
-    <p style="font-size: 0.72rem; color: rgba(247, 242, 233, 0.35); margin-top: 6px;">Sample product imagery: Wikimedia Commons (CC BY 2.0 / CC BY-SA 4.0 / CC BY 4.0)</p>
+    <p style="font-size: 0.72rem; color: var(--text-3); margin-top: 6px;">Sample product imagery: Wikimedia Commons (CC BY 2.0 / CC BY-SA 4.0 / CC BY 4.0)</p>
   </footer>
 
   <!-- Floating WhatsApp bubble -->
