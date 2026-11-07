@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-label="Brown unbranded penny loafer illustration">
+  <defs>
+    <linearGradient id="up" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8f5e3e"/><stop offset="1" stop-color="#5d3a24"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="212" cy="266" rx="180" ry="13" fill="rgba(0,0,0,0.30)"/>
+  <rect x="26" y="246" width="370" height="13" rx="6.5" fill="#b9b4aa"/>
+  <rect x="20" y="228" width="380" height="22" rx="11" fill="#fbfaf7"/>
+  <path d="M40,232 C36,208 56,188 92,178 C142,164 224,152 284,152 C336,152 368,182 378,232 Z" fill="url(#up)" stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+  <path d="M40,232 C36,208 56,188 92,178 C82,196 80,214 82,232 Z" fill="#a06c48" stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+  <path d="M118,176 C176,156 258,150 318,160" stroke="#3f2716" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M148,172 L252,158 L256,172 L152,186 Z" fill="#4a2f1c" stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+  <rect x="196" y="161" width="14" height="9" rx="3" fill="#2c1b0f"/>
+  <path d="M300,164 C332,174 350,196 356,232 L322,232 C318,204 312,182 302,168 Z" fill="#6b4429" stroke="rgba(0,0,0,0.15)" stroke-width="2"/>
+  <path d="M96,224 C124,202 158,190 194,184" stroke="rgba(0,0,0,0.14)" stroke-width="2" stroke-dasharray="5 5" fill="none"/>
+</svg>
