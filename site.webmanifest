@@ -1,11 +1,11 @@
 {
-  "name": "PT Shoes — Factory-Direct Sneakers, Boots & Bags",
+  "name": "PT Shoes — Unbranded Footwear & Bag Selection",
   "short_name": "PT Shoes",
-  "description": "Factory-direct sneakers, boots, and bags with hand-checked quality and worldwide shipping.",
+  "description": "Unbranded footwear and bag style selection with one-to-one assistance in English and Chinese.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0e0c09",
-  "theme_color": "#0e0c09",
+  "background_color": "#fbfaf7",
+  "theme_color": "#fbfaf7",
   "icons": [
     { "src": "/site-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
