@@ -12,7 +12,10 @@
       languageButton.textContent = language === "en" ? "中文" : "EN";
       languageButton.setAttribute("aria-label", language === "en" ? "切换到中文" : "Switch to English");
     }
-    try { localStorage.setItem("pt-language", language); } catch (_) {}
+    document.querySelectorAll("[data-inquiry-hint]").forEach(function (hint) {
+      var sku = hint.parentElement.querySelector("[data-inquiry]")?.getAttribute("data-inquiry") || "PT-CATALOG";
+      hint.textContent = language === "zh-CN" ? "联系时请提供编号 " + sku + "。" : "Reference " + sku + " when you message us.";
+    });
   }
 
   applyLanguage(language);
@@ -53,14 +56,19 @@
   document.querySelectorAll("[data-copy-whatsapp]").forEach(function (button) {
     button.addEventListener("click", function () {
       copyText("btc188").then(function (ok) {
-        announce(ok ? "WhatsApp ID copied: btc188" : "Copy failed. WhatsApp ID: btc188", ok ? "已复制 WhatsApp ID：btc188" : "复制失败，请手动复制：btc188");
+        announce(ok ? "Copied btc188. Search this ID in WhatsApp." : "Copy failed — search for btc188 manually.", ok ? "已复制 btc188，请在 WhatsApp 中搜索此 ID。" : "复制失败，请手动搜索 btc188。" );
       });
     });
   });
 
   document.querySelectorAll("[data-inquiry]").forEach(function (link) {
+    var sku = link.getAttribute("data-inquiry") || "PT-CATALOG";
+    var hint = document.createElement("small");
+    hint.className = "inquiry-hint";
+    hint.setAttribute("data-inquiry-hint", "");
+    hint.textContent = language === "zh-CN" ? "联系时请提供编号 " + sku + "。" : "Reference " + sku + " when you message us.";
+    link.parentElement.appendChild(hint);
     link.addEventListener("click", function () {
-      var sku = link.getAttribute("data-inquiry") || "PT-CATALOG";
       var message = language === "zh-CN"
         ? "你好，我想咨询 " + sku + "。请提供当前实拍、可选颜色与尺码、价格、运费和预计配送时间。"
         : "Hi, I would like to ask about " + sku + ". Please share current photos, available colors and sizes, price, shipping cost, and estimated delivery time.";
